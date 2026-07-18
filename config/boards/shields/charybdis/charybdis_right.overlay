@@ -5,7 +5,7 @@
  */
  
 #include "charybdis.dtsi"
-&matrix_transform0 {
+&matrix_transform2 {
 	col-offset = <6>;
 };
 
