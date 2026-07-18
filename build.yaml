@@ -12,11 +12,28 @@
 #     shield: reviung41
 #
 include:
+  # Standard left-central setup.
   - board: nice_nano//zmk
     shield: charybdis_left
     snippet: nrf52840-nosd
   - board: nice_nano//zmk
     shield: charybdis_right
+    snippet: nrf52840-nosd
+
+  # Dongle-central setup: flash this to the Prospector XIAO BLE dongle.
+  - board: seeeduino_xiao_ble
+    shield: charybdis_dongle prospector_adapter
+    snippet: nrf52840-nosd
+
+  # Reflash the left half as a peripheral when using the dongle.
+  - board: nice_nano//zmk
+    shield: charybdis_left
+    snippet: nrf52840-nosd
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+
+  # Reset settings on the XIAO BLE dongle before pairing all three devices.
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
     snippet: nrf52840-nosd
 
   - board: nice_nano//zmk
