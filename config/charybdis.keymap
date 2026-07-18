@@ -26,12 +26,17 @@
 
         app_layer_combo {
             bindings = <&mo 8>;
-            key-positions = <31 32>;
+            key-positions = <32 30>;
         };
 
         ray_layer_combo {
             bindings = <&mo 9>;
-            key-positions = <34 33>;
+            key-positions = <30 31>;
+        };
+
+        function_combo {
+            bindings = <&mo 6>;
+            key-positions = <35 34>;
         };
     };
 
@@ -57,103 +62,97 @@
 
         BASE {
             label = "BAS";
-
             bindings = <
-&kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y        &kp U            &kp I         &kp O       &kp P
-&mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H        &mt RSHFT J      &mt RCTRL K   &mt RALT L  &mt RGUI SQT
-&kp Z       &kp X       &kp C        &kp V        &kp B        &kp N        &kp M            &kp COMMA     &kp PERIOD  &kp SLASH
-                                    &lt 1 ESC    &lt 2 SPACE  &lt 3 TAB    &lt 4 ENTER  &lt 5 BACKSPACE  &lt 6 DELETE
+&kp Q       &kp W        &kp E        &kp R        &kp T            &kp Y        &kp U        &kp I        &kp O       &kp P
+&mt LGUI A  &mt LALT S   &mt LCTRL D  &mt LSHFT F  &kp G            &kp H        &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SQT
+&kp Z       &kp X        &kp C        &kp V        &kp B            &kp N        &kp M        &kp COMMA    &kp PERIOD  &kp SLASH
+&lt 2 ESC   &lt 3 SPACE  &lt 1 TAB    &none        &lt 4 BACKSPACE  &lt 5 ENTER
             >;
         };
 
         MEDIA {
             label = "MED";
-
             bindings = <
-&none         &none         &none      &none           &none    &bt BT_CLR  &bt BT_DISC 0     &bt BT_DISC 1  &bt BT_DISC 2    &bt BT_DISC 3
-&kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none    &none       &kp C_PREV        &kp C_VOL_DN   &kp C_VOLUME_UP  &kp C_NEXT
-&none         &none         &none      &none           &none    &none       &bt BT_SEL 0      &bt BT_SEL 1   &bt BT_SEL 2     &bt BT_SEL 3
-                                      &none           &none    &none       &kp C_STOP        &kp C_PLAY_PAUSE  &kp C_MUTE
+&none         &none         &none      &none           &none             &bt BT_CLR  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2    &bt BT_DISC 3
+&kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none             &none       &kp C_PREV     &kp C_VOL_DN   &kp C_VOLUME_UP  &kp C_NEXT
+&none         &none         &none      &none           &none             &none       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2     &bt BT_SEL 3
+&none         &none         &none      &kp C_STOP      &kp C_PLAY_PAUSE  &kp C_MUTE
             >;
         };
 
         NAVI {
             label = "NAV";
-
             bindings = <
-&none     &kp F13   &kp F14    &kp F15     &none    &kp LG(LS(Z))  &kp LG(V)      &kp LG(C)      &kp LG(X)     &kp LG(Z)
-&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none    &kp CAPSLOCK   &kp LEFT       &kp DOWN       &kp UP_ARROW  &kp RIGHT
-&none     &none     &none      &none       &none    &kp INSERT     &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP   &kp END
-                              &none       &none    &none          &kp ENTER      &kp BACKSPACE  &kp DELETE
+&none     &kp F13   &kp F14    &kp F15     &none          &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)      &kp LG(X)     &kp LG(Z)
+&kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none          &kp CAPSLOCK   &kp LEFT   &kp DOWN       &kp UP_ARROW  &kp RIGHT
+&none     &none     &none      &none       &none          &kp INSERT     &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP   &kp END
+&none     &none     &none      &trans      &kp BACKSPACE  &kp ENTER
             >;
         };
 
         MOUSE {
             bindings = <
-&none     &none         &none           &mo 7           &kp F16      &kp LG(LS(Z))  &kp LG(V)         &kp LG(C)         &kp LG(X)        &kp LG(Z)
-&kp LGUI  &kp LEFT_ALT  &kp LCTRL       &kp LEFT_SHIFT  &mkp LCLK    &mkp LCLK      &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_UP     &mmv MOVE_RIGHT
-&none     &none         &msc SCRL_DOWN  &msc SCRL_UP    &mkp RCLK    &mkp RCLK      &msc MOVE_X(-15)  &msc MOVE_Y(-15)  &msc MOVE_Y(15)  &msc MOVE_X(15)
-                                          &none           &none        &none          &mkp RCLK         &mkp LCLK         &mkp MCLK
+&none     &none         &none           &mo 7           &kp F16    &kp LG(LS(Z))  &kp LG(V)         &kp LG(C)         &kp LG(X)        &kp LG(Z)
+&kp LGUI  &kp LEFT_ALT  &kp LCTRL       &kp LEFT_SHIFT  &mkp LCLK  &mkp LCLK      &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_UP     &mmv MOVE_RIGHT
+&none     &none         &msc SCRL_DOWN  &msc SCRL_UP    &mkp RCLK  &mkp RCLK      &msc MOVE_X(-15)  &msc MOVE_Y(-15)  &msc MOVE_Y(15)  &msc MOVE_X(15)
+&none     &none         &none           &none           &mkp LCLK  &mkp RCLK
             >;
         };
 
         SYMBOL {
             label = "SYM";
-
             bindings = <
-&kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE    &none  &none  &none  &none  &none
-&kp COLON       &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS           &none  &none  &none  &none  &none
-&kp TILDE       &kp EXCLAMATION  &kp AT_SIGN           &kp HASH               &kp PIPE           &none  &none  &none  &none  &none
-                                                       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &none  &none  &none
+&kp LEFT_BRACE        &kp AMPERSAND          &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_BRACE  &none  &none  &none  &none  &none
+&kp COLON             &kp DOLLAR             &kp PERCENT     &kp CARET             &kp PLUS         &none  &none  &none  &none  &none
+&kp TILDE             &kp EXCLAMATION        &kp AT_SIGN     &kp HASH              &kp PIPE         &none  &none  &none  &none  &none
+&kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE  &none                 &none            &none
             >;
         };
 
         NUMBER {
             label = "NUM";
-
             bindings = <
-&kp LEFT_BRACKET  &kp N7  &kp N8      &kp N9  &kp RIGHT_BRACKET    &none  &none            &none      &none          &none
-&kp SEMICOLON     &kp N4  &kp N5      &kp N6  &kp EQUAL            &none  &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &kp RIGHT_GUI
-&kp GRAVE         &kp N1  &kp N2      &kp N3  &kp BACKSLASH        &none  &none            &none      &none          &none
-                                      &kp PERIOD  &kp N0  &kp MINUS  &none  &none            &none
+&kp LEFT_BRACKET  &kp N7  &kp N8     &kp N9  &kp RIGHT_BRACKET  &none  &none            &none      &none          &none
+&kp SEMICOLON     &kp N4  &kp N5     &kp N6  &kp EQUAL          &none  &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &kp RIGHT_GUI
+&kp GRAVE         &kp N1  &kp N2     &kp N3  &kp BACKSLASH      &none  &none            &none      &none          &none
+&kp PERIOD        &kp N0  &kp MINUS  &none   &none              &none
             >;
         };
 
         FUNC {
             label = "FUN";
-
             bindings = <
-&kp F12  &kp F7  &kp F8      &kp F9     &kp PRINTSCREEN    &trans  &trans           &trans     &trans         &trans
-&kp F11  &kp F4  &kp F5      &kp F6     &kp SCROLLLOCK     &trans  &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &kp RGUI
-&kp F10  &kp F1  &kp F2      &kp F3     &kp PAUSE_BREAK    &trans  &trans           &trans     &trans         &trans
-                         &kp K_MENU  &kp SPACE  &kp TAB    &trans  &trans           &trans
+&kp F12     &kp F7     &kp F8   &kp F9  &kp PRINTSCREEN  &trans  &trans           &trans     &trans         &trans
+&kp F11     &kp F4     &kp F5   &kp F6  &kp SCROLLLOCK   &trans  &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &kp RGUI
+&kp F10     &kp F1     &kp F2   &kp F3  &kp PAUSE_BREAK  &trans  &trans           &trans     &trans         &trans
+&kp K_MENU  &kp SPACE  &kp TAB  &trans  &trans           &trans
             >;
         };
 
         MICE {
             bindings = <
-&trans    &trans        &trans            &trans          &trans       &kp LS(LG(Z))   &kp LG(V)           &kp LG(C)          &kp LG(X)           &kp LC(Z)
-&kp LGUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &msc SCRL_DOWN  &mkp LCLK    &msc SCRL_DOWN  &mmv MOVE_X(-4000)  &mmv MOVE_Y(4000)  &mmv MOVE_Y(-4000)  &mmv MOVE_X(4000)
-&trans    &trans        &trans            &msc SCRL_UP    &mkp RCLK    &msc SCRL_UP    &msc MOVE_X(-25)    &msc MOVE_Y(-25)   &msc MOVE_Y(25)     &msc MOVE_X(25)
-                                      &trans          &trans       &trans          &mkp RCLK           &mkp LCLK          &mkp MCLK
+&trans    &trans        &trans            &trans          &trans     &kp LS(LG(Z))   &kp LG(V)           &kp LG(C)          &kp LG(X)           &kp LC(Z)
+&kp LGUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &msc SCRL_DOWN  &mkp LCLK  &msc SCRL_DOWN  &mmv MOVE_X(-4000)  &mmv MOVE_Y(4000)  &mmv MOVE_Y(-4000)  &mmv MOVE_X(4000)
+&trans    &trans        &trans            &msc SCRL_UP    &mkp RCLK  &msc SCRL_UP    &msc MOVE_X(-25)    &msc MOVE_Y(-25)   &msc MOVE_Y(25)     &msc MOVE_X(25)
+&trans    &trans        &trans            &trans          &mkp LCLK  &mkp RCLK
             >;
         };
 
         APP {
             bindings = <
-&kp RS(RA(RC(RG(Q))))  &kp RS(RA(RC(RG(W))))  &kp RS(RA(RC(RG(E))))  &kp RS(RA(RC(RG(R))))  &kp RS(RA(RC(RG(T))))    &kp RS(RA(RC(RG(Y))))  &kp RS(RA(RC(RG(U))))  &kp RS(RA(RC(RG(I))))  &kp RS(RA(RC(RG(O))))  &kp RS(RA(RC(RG(P))))
-&kp RS(RA(RC(RG(A))))  &kp RS(RA(RC(RG(S))))  &kp RS(RA(RC(RG(D))))  &kp RS(RA(RC(RG(F))))  &kp RS(RA(RC(RG(G))))    &kp RS(RA(RC(RG(H))))  &kp RS(RA(RC(RG(J))))  &kp RS(RA(RC(RG(K))))  &kp RS(RA(RC(RG(L))))  &trans
-&kp RS(RA(RC(RG(Z))))  &kp RS(RA(RC(RG(X))))  &kp RS(RA(RC(RG(C))))  &kp RS(RA(RC(RG(V))))  &kp RS(RA(RC(RG(B))))    &kp RS(RA(RC(RG(N))))  &kp RS(RA(RC(RG(M))))  &trans                 &trans                 &trans
-                                                      &trans                 &trans                 &trans                   &trans                 &trans                 &trans
+&kp RS(RA(RC(RG(Q))))  &kp RS(RA(RC(RG(W))))  &kp RS(RA(RC(RG(E))))  &kp RS(RA(RC(RG(R))))  &kp RS(RA(RC(RG(T))))  &kp RS(RA(RC(RG(Y))))  &kp RS(RA(RC(RG(U))))  &kp RS(RA(RC(RG(I))))  &kp RS(RA(RC(RG(O))))  &kp RS(RA(RC(RG(P))))
+&kp RS(RA(RC(RG(A))))  &kp RS(RA(RC(RG(S))))  &kp RS(RA(RC(RG(D))))  &kp RS(RA(RC(RG(F))))  &kp RS(RA(RC(RG(G))))  &kp RS(RA(RC(RG(H))))  &kp RS(RA(RC(RG(J))))  &kp RS(RA(RC(RG(K))))  &kp RS(RA(RC(RG(L))))  &trans
+&kp RS(RA(RC(RG(Z))))  &kp RS(RA(RC(RG(X))))  &kp RS(RA(RC(RG(C))))  &kp RS(RA(RC(RG(V))))  &kp RS(RA(RC(RG(B))))  &kp RS(RA(RC(RG(N))))  &kp RS(RA(RC(RG(M))))  &trans                 &trans                 &trans
+&trans                 &trans                 &trans                 &trans                 &trans                 &trans
             >;
         };
 
-        RAY {
+        RAYCAST {
             bindings = <
-&trans  &kp RS(RA(RC(RG(NUMBER_2))))  &kp RS(RA(RC(RG(NUMBER_3))))   &kp RS(RA(RC(RG(NUMBER_4))))  &trans    &trans  &trans                  &trans                        &trans                  &trans
-&trans  &kp RA(RS(RC(RG(F20))))       &kp RS(RA(RC(RG(SEMICOLON))))  &kp RS(RA(RC(RG(NUMBER_1))))  &trans    &trans  &kp RS(RA(RC(RG(N8))))  &kp RS(RA(RC(RG(N9))))        &kp RS(RA(RC(RG(N0))))  &trans
-&trans  &kp RS(RA(RC(RG(F17))))       &kp RS(RA(RC(RG(F18))))        &kp RS(RA(RC(RG(F19))))       &trans    &trans  &kp RS(RA(RC(RG(N5))))  &kp RS(RA(RC(RG(NUMBER_6))))  &kp RS(RA(RC(RG(N7))))  &trans
-                                              &trans                         &trans                        &trans    &trans  &trans                  &trans
+&trans  &kp RS(RA(RC(RG(NUMBER_2))))  &kp RS(RA(RC(RG(NUMBER_3))))   &kp RS(RA(RC(RG(NUMBER_4))))  &trans  &trans  &trans                  &kp RS(RA(RC(RG(N7))))        &trans                  &trans
+&trans  &kp RA(RS(RC(RG(F20))))       &kp RS(RA(RC(RG(SEMICOLON))))  &kp RS(RA(RC(RG(NUMBER_1))))  &trans  &trans  &kp RS(RA(RC(RG(N8))))  &kp RS(RA(RC(RG(N9))))        &kp RS(RA(RC(RG(N0))))  &trans
+&trans  &kp RS(RA(RC(RG(F17))))       &kp RS(RA(RC(RG(F18))))        &kp RS(RA(RC(RG(F19))))       &trans  &trans  &kp RS(RA(RC(RG(N5))))  &kp RS(RA(RC(RG(NUMBER_6))))  &trans                  &trans
+&trans  &trans                        &trans                         &trans                        &trans  &trans
             >;
         };
     };
