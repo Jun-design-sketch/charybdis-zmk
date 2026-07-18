@@ -19,7 +19,6 @@ include:
     shield: charybdis_right
     snippet: nrf52840-nosd
 
-  # - board: nice_nano//zmk
-  #   shield: settings_reset
-  #   snippet: nrf52840-nosd
-
+  - board: nice_nano//zmk
+    shield: settings_reset
+    snippet: nrf52840-nosd
